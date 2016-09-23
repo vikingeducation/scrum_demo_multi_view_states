@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="TargetPractice">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-View Target Practice</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+    <!-- UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="page-header text-center">
+      <h1>Multi-View Target Practice | <span ui-view="main-header"></span></h1>
+    </header>
+
+
+    <main class="container">
+      <!-- Nav -->
+      <ul class="nav nav-pills">
+        <li><a ui-sref="one">One</a></li>
+        <li><a ui-sref="one.two">Two</a></li>
+      </ul>
+
+      <h2>One</h2>
+
+      <div ui-view></div>
+      <div ui-view="named-one"></div>
+    </main>
+
+    
+    <!-- App -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
+
